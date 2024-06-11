@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<p>The onclick event triggers a function when an element is clicked on.</p>
+<p>Click to trigger a function that will output "Hello World":</p>
+
+<form action="/action_page.php">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" ><br><br>
+    
+    <button style="width: 100px; background-color:red;" onclick="LoginUserName()">Login</button>
+  </form>
+  
+
+
+
+<p id="Student login"></p>
+
+<script>
+
+function LoginUserName(){
+    usr = document.getElementById("email").value;
+    pwd = document.getElementById("pwd").value;
+    if(usr == 'user@gmail.com' && pwd == '123'){
+            alert("User name login success.")
+            window.open("StudentPage.htm");
+        }else{
+            alert("User name or password incorrect! Try again.")
+        }
+            
+}
+
+
+</script>
+
+</body>
+</html>
